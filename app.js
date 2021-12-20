@@ -21,7 +21,7 @@ app.use(express.static(__dirname + '/app/public'));
 app.get('*', function(req, res) { res.render('home'); });
 
 app.post('/tokenize', function (req, res) {
-	axios.post("http://34.76.106.188:8000//yap/heb/joint", req.body.body)
+	axios.post("http://34.76.106.188:8000/yap/heb/joint", req.body.body)
 	.then(function (response) {
 		res.send(response.data)
 	})
